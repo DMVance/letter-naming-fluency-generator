@@ -11,3 +11,5 @@ Letter naming fluency is included in many assessments because it’s a great ind
 When children can recognize and name the letters of the alphabet accurately and automatically, they have a foundation for learning the alphabetic principle and learning to read. (Adams, 1994; Ehri, 2005)
 
 Also, students who recognize letters with accuracy and speed have an easier time learning the sounds associated with them. (Adams, 1999)
+
+This app generates lists of letters that educators can use in the classroom for this important assessment.

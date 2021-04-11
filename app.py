@@ -1,11 +1,13 @@
 from flask import Flask, jsonify, render_template, request, make_response
+from letters import letters
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    # fig = russ_map()
-    return render_template("letter_generator.html")
+    output = letters()
+    # return render_template("letter_generator.html")
+    return render_template("letter_generator.html", output=output)
 
 # @app.route("/places")
 # def places():

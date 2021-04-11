@@ -1,22 +1,5 @@
 import string, random
-# import pandas as pd
-# import plotly
-# import plotly.express as px
-# import plotly.graph_objects as go
-# import os, csv, requests, json, datetime
-# import numpy as np
-# from datetime import date
-# from flask import Flask, jsonify, render_template, request, make_response
-# import re
-# from config import mapbox_token
-# from flask_sqlalchemy import SQLAlchemy
-# from sklearn.feature_extraction.text import CountVectorizer
-# import nltk
-# from nltk.corpus import stopwords
 
-# app = Flask(__name__)
-
-# @app.route("/places")
 def letters_gen():
 
     # print("Please enter the number of letters and press [Enter]: ")
@@ -24,6 +7,9 @@ def letters_gen():
 
     print("Lowercase, Uppercase or Mixed [L, U, M]: ")
     m = input("--> ")
+
+    # split the string of words into individual words and eliiminate unnecessary characters
+    #     words = words.replace("-", " ").replace(",", " ").replace("*", " ").split(" ") # delimiter = any character in wrdset that isn't in alphabet
 
     if m == "L":
         alphabet = list(string.ascii_lowercase)
@@ -64,29 +50,10 @@ def letters_gen():
 
     return ' '.join(random_letters)
 
-# def main():
+def main():
 
-#     # Get the word(s) from the user
-#     print("Please enter the words and press [Enter]: ")
-#     words = input("--> ").lower()
-    
-#     # split the string of words into individual words and eliiminate unnecessary characters
-#     words = words.replace("-", " ").replace(",", " ").replace("*", " ").split(" ") # delimiter = any character in wrdset that isn't in alphabet
-
-
+    letters_gen()
 
 #######################################################################################
 
-letters_gen()
-
-# main()
-
-#######################################################################################
-
-# @app.route("/")
-# def home():
-#     output = letters()
-#     return render_template("letter_generator.html", output=output)
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
+main()

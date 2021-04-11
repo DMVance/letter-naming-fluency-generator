@@ -1,5 +1,5 @@
 # letter-naming-fluency-generator
-<img src=Readme-Images/letters.jpg width=1000></img>
+<img src=./Readme-Images/letters.jpg width=1000></img>
 
 What is letter naming fluency?
 

@@ -18,11 +18,13 @@ def generate_letters():
     else:
         alphabet = list(string.ascii_letters)
 
-    # n = 26
-    # m = 52
-    p = 26
+    # If n exceeds 26, break into units < 26 and repeat randomization for each set. Else select random sample of size n from alphabet.
+    if n > 26:
+        p = # x number of variables containing max value of 26
+        random_letters = random.sample(alphabet, n)
+    else:
+        random_letters = random.sample(alphabet, n)
 
-    random_letters = random.sample(alphabet, p)
 
     # test = random_letters[:5]
 

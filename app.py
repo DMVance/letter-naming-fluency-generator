@@ -1,11 +1,11 @@
 from flask import Flask, jsonify, render_template, request, make_response
-from letters import letters
+from letters import letters_gen
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    output = letters()
+    output = letters_gen()
     # return render_template("letter_generator.html")
     return render_template("letter_generator.html", output=output)
 

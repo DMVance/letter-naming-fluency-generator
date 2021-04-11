@@ -6,7 +6,7 @@ import string, random
 # import os, csv, requests, json, datetime
 # import numpy as np
 # from datetime import date
-from flask import Flask, jsonify, render_template, request, make_response
+# from flask import Flask, jsonify, render_template, request, make_response
 # import re
 # from config import mapbox_token
 # from flask_sqlalchemy import SQLAlchemy
@@ -17,7 +17,7 @@ from flask import Flask, jsonify, render_template, request, make_response
 # app = Flask(__name__)
 
 # @app.route("/places")
-def letters():
+def letters_gen():
 
     lowercase_alphabet = list(string.ascii_lowercase)
     uppercase_alphabet = list(string.ascii_uppercase)
@@ -55,7 +55,7 @@ def letters():
     # print(', '.join(random_mix[40:45]))
     # print(', '.join(random_mix[45:52]))
 
-    return test
+    return ' '.join(random_lowercase[:5])
 
 
 #######################################################################################

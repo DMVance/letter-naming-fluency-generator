@@ -1,9 +1,9 @@
 import string, random
 
-def letters_gen():
+def generate_letters():
 
-    # print("Please enter the number of letters and press [Enter]: ")
-    # n = input("--> ")
+    print("Please enter the number of letters and press [Enter]: ")
+    n = int(input("--> "))
 
     print("Lowercase, Uppercase or Mixed [L, U, M]: ")
     m = input("--> ")
@@ -15,17 +15,20 @@ def letters_gen():
         alphabet = list(string.ascii_lowercase)
     elif m == "U":
         alphabet = list(string.ascii_uppercase)
-    elif m == "M":
+    else:
         alphabet = list(string.ascii_letters)
 
-    n = 26
+    # n = 26
     # m = 52
+    p = 26
 
-    random_letters = random.sample(alphabet, n)
+    random_letters = random.sample(alphabet, p)
 
     # test = random_letters[:5]
 
-    # print(', '.join(random_lowercase[:5]))
+    print(' '.join(random_letters[:5]))
+    print(' '.join(random_letters))
+
     # print(', '.join(random_lowercase[5:10]))
     # print(', '.join(random_lowercase[10:15]))
     # print(', '.join(random_lowercase[15:20]))
@@ -52,7 +55,7 @@ def letters_gen():
 
 def main():
 
-    letters_gen()
+    generate_letters()
 
 #######################################################################################
 

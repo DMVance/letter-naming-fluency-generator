@@ -11,7 +11,6 @@ def generate_letters():
             print("Your response must be a positive number.")
             continue
         break
-    print(lines)
 
     while True:
         print("Would you like Uppercase, Lowercase or Mixed [U, L, M]?")
@@ -21,7 +20,6 @@ def generate_letters():
             print("Please enter either 'U', 'L', or 'M'")
             continue
         break
-    print(case)
 
     if case == "l":
         alphabet = list(string.ascii_lowercase)     # Can this section be collapsed?

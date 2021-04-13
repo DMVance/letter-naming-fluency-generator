@@ -6,7 +6,12 @@ def generate_letters():
     
     while True:
         print("Please enter the number of lines and press [Enter]:")
-        lines = int(input("--> "))
+        try:
+            lines = int(input("--> "))
+            print(type(lines))
+        except ValueError:
+            print("Not a valid number.")
+            continue
         if lines < 0:
             print("Your response must be a positive number.")
             continue

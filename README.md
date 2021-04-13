@@ -14,3 +14,9 @@ When children can recognize and name the letters of the alphabet accurately and 
 Also, students who recognize letters with accuracy and speed have an easier time learning the sounds associated with them. (Adams, 1999)
 
 This app generates lists of letters that educators can use in the classroom for this important assessment.
+
+### Technologies Used
+* Python
+* JavaScript
+* HTML/CSS
+* Flask, Jinja

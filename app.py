@@ -8,5 +8,7 @@ def index():
     output = generate_letters()
     return render_template("parent.html", output=output)
 
+# Placeholder for additional routes
+
 if __name__ == "__main__":
     app.run(debug=True)

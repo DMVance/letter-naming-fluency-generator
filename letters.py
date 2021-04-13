@@ -2,49 +2,69 @@ import string, random
 
 def generate_letters():
 
-    print("Please enter the number of lines and press [Enter]: ")
-    lines = int(input("--> "))
-
-    print("Would you like Lowercase, Uppercase or Mixed [L, U, M]: ")
-    case = input("--> ").lower()
-
     p = 10
-    try:
-        if case == "l":
-            alphabet = list(string.ascii_lowercase)     # Can this section be collapsed?
-        elif case == "u":
-            alphabet = list(string.ascii_uppercase)
-        elif case == "m":
-            alphabet = list(string.ascii_letters)
-    except ValueError:
-        print("Error: invalid entry. Please try again.")  # Research proper use of exception handling.
+    
+    # while True:
+    #     try:
+    #         print("Please enter the number of lines and press [Enter]: ")
+    #         lines = int(input("--> "))
+    #     except ValueError:
+    #         print("Error: invalid entry.")  # Research proper use of exception handling.
+    #         continue
+
+    #     if lines < 0:
+    #         print("Your response must be a positive number.")
+    #         continue
+    #     else:
+    #         break
+
+
+
+
+    # while True:
+    # try:
+    #     age = int(input("Please enter your age: "))
+    # except ValueError:
+    #     print("Sorry, I didn't understand that.")
+    #     continue
+
+    # if age < 0:
+    #     print("Sorry, your response must not be negative.")
+    #     continue
+    # else:
+    #     #age was successfully parsed, and we're happy with its value.
+    #     #we're ready to exit the loop.
+    #     break
+
+    while True:
+    data = input("Please enter a loud message (must be all caps): ")
+    if not data.isupper():
+        print("Sorry, your response was not loud enough.")
+        continue
+    else:
+        #we're happy with the value given.
+        #we're ready to exit the loop.
+        break
+
+    while True:
+        data = input("Pick an answer from A to D:")
+        if data.lower() not in ('a', 'b', 'c', 'd'):
+            print("Not an appropriate choice.")
+        else:
+            break
+
+    # if case == "l":
+    #     alphabet = list(string.ascii_lowercase)     # Can this section be collapsed?
+    # elif case == "u":
+    #     alphabet = list(string.ascii_uppercase)
+    # elif case == "m":
+    #     alphabet = list(string.ascii_letters)
 
     for i in range(lines):
         random_letters = random.sample(alphabet, p)
         print(' '.join(random_letters))
 
-    # print(' '.join(random_letters[:5]))
-    # print(', '.join(random_lowercase[5:10]))
-    # print(', '.join(random_lowercase[10:15]))
-    # print(', '.join(random_lowercase[15:20]))
-    # print(', '.join(random_lowercase[20:26]))
-    # print("\n")
-    # print(', '.join(random_uppercase[:5]))
-    # print(', '.join(random_uppercase[5:10]))
-    # print(', '.join(random_uppercase[10:15]))
-    # print(', '.join(random_uppercase[15:20]))
-    # print(', '.join(random_uppercase[20:26]))
-    # print("\n")
-    # print(', '.join(random_mix[:5]))
-    # print(', '.join(random_mix[5:10]))
-    # print(', '.join(random_mix[10:15]))
-    # print(', '.join(random_mix[15:20]))
-    # print(', '.join(random_mix[20:25]))
-    # print(', '.join(random_mix[25:30]))
-    # print(', '.join(random_mix[30:35]))
-    # print(', '.join(random_mix[35:40]))
-    # print(', '.join(random_mix[40:45]))
-    # print(', '.join(random_mix[45:52]))
+
 
     return # ' '.join(random_letters)
 

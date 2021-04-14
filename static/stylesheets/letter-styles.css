@@ -1,0 +1,7 @@
+input[type=text] {
+    width: 500px;
+ }
+
+.input-box {
+    margin-bottom: 30px;
+}

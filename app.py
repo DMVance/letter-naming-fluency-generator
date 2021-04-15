@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, render_template, request, make_response
+
 from letters import generate_letters
 
 app = Flask(__name__)

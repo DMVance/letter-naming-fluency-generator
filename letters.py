@@ -4,7 +4,7 @@ def get_lines():
     while True:
         print("Please enter the number of lines and press [Enter]:")
         try:
-            lines = int(input("--> "))
+            lines = int(input("--> ")) # How to get input from HTML?
         except ValueError:
             print("Not a valid number.")
             continue
@@ -29,8 +29,8 @@ def get_case():
 
 def generate_letters():
 
-    lines = get_lines()
-    case = get_case()
+    lines = get_lines()  # Get from HTML input rather than function
+    case = get_case()    # Get from HTML input rather than function
 
     if case == "l":
         alphabet = list(string.ascii_lowercase)     # Can this section be collapsed?
@@ -40,11 +40,12 @@ def generate_letters():
         alphabet = list(string.ascii_letters)
     
     p = 10
+    output_list = []
     for i in range(lines):
-        random_letters = random.sample(alphabet, p) # send to JSON
+        random_letters = random.sample(alphabet, p) # send to JSON?
         print(' '.join(random_letters))
 
-    return 
+    return random_letters
 
 def main():
 

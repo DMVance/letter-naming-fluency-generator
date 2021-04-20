@@ -17,6 +17,7 @@ This app generates lists of letters that educators can use in the classroom for 
 
 ### Technologies Used
 * Python
-* JavaScript
 * HTML/CSS
+* JavaScript
+* D3
 * Flask, Jinja

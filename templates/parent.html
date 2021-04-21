@@ -20,7 +20,7 @@
         <!-- Use JS, D3 -->
         <form>  
             <label>Enter number of lines (1-20):</label>  
-            <input type="number" name="lines" min="1" max="20">  
+            <input type="number" name="lines" min="1" max="20">  <!-- need "onclick" here? -->
             <br>
             <br>
             <p>Please select case type:</p>
@@ -41,10 +41,12 @@
 
         {% block content %}{% endblock%}
 
-    </body>
-
     <script src="./static/js/app.js">
         console.log("Hello World")
     </script>
+
+    </body>
+
+
 
 </html>

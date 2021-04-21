@@ -49,7 +49,7 @@ def generate_letters():
 
 def main():
 
-    generate_letters()  # Send output to JSON for 
+    generate_letters()  # Send output to JSON?
 
     return
 

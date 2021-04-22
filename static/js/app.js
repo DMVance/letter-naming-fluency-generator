@@ -27,3 +27,8 @@ d3.select("#case-submit-button").on("change", (event) => {
 //     console.log(`Case selected: ${userCase}`)
 //     d3.select("body").append("p").text(userCase)
 // })
+
+// Once logic is working and data is flowing properly between scripts and 
+// webpage, work on styling the appearance of the page and display of results.
+// When this project is complete, extend the project to include more routes
+// to other pages with data analysis visualizations and eventually ML plots.

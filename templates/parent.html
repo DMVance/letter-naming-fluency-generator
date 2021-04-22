@@ -20,17 +20,23 @@
         <!-- Use JS, D3 -->
         <form>  
             <label>Enter number of lines (1-20):</label>  
-            <input type="number" name="lines" min="1" max="20">  <!-- need "onclick" here? -->
+            <input type="number" id="lines-submit-button" name="lines" min="1" max="20">  <!-- need "onclick" here? -->
             <br>
             <br>
             <p>Please select case type:</p>
-            <input type="radio" id="uppercase" name="case" value="u"> 
+            <label>Uppercase(U), Lowercase(L) or Mixed(M):</label>  
+            <input type="text" id="case-submit-button" name="case">  <!-- need "onclick" here? -->
+            <br>
+            <br>
+            <!-- <input type="radio" id="uppercase" name="case" value="u"> 
             <label for="uppercase"> Uppercase  </label>
             <input type="radio" id="lowercase" name="case" value="l">
             <label for="lowercase"> Lowercase</label>
             <input type="radio" id="mixed" name="case" value="m">
-            <label for="mixed"> Mixed  </label>
-            <input type="submit" value="Submit" id="case-submit-button" onclick="getLines()">  <!-- How to send selection to function in letters.py? Is it actually sent to app.js, then app.js triggers function from letters.py? -->
+            <label for="mixed"> Mixed  </label> -->
+            <!-- <button>Submit</button> -->
+            <!-- <input type="button" name="name" id="case-submit-button" value="Submit">  How to send selection to function in letters.py? Is it actually sent to app.js, then app.js triggers function from letters.py? -->
+            <!-- <input type="text" name="name" id="case-submit-button" value="value"/> -->
         </form>  
 
         <br>

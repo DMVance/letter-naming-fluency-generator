@@ -29,8 +29,8 @@ def get_case():
 
 def generate_letters():
 
-    lines = get_lines()  # Get from HTML input rather than function
-    case = get_case()    # Get from HTML input rather than function
+    lines = get_lines()  # Get from HTML input or app.js rather than function
+    case = get_case()    # Get from HTML input or app.js rather than function
 
     if case == "l":
         alphabet = list(string.ascii_lowercase)     # Can this section be collapsed?
@@ -42,16 +42,19 @@ def generate_letters():
     p = 10
     output_list = []
     for i in range(lines):
-        random_letters = random.sample(alphabet, p) # send to JSON?
+        random_letters = random.sample(alphabet, p)
         print(' '.join(random_letters))
 
-    return random_letters
+    return random_letters # Return a JSON that can be pulled into JS.
 
 def main():
 
-    generate_letters()  # Send output to JSON?
+    generate_letters()
 
     return
+
+# Here in python generate the printable PDF of the generated letters.
+# Research how to format the PDF for aesthetically pleasing results.
 
 #######################################################################################
 

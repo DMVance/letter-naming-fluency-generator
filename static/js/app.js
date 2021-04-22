@@ -21,6 +21,15 @@ d3.select("#case-submit-button").on("change", (event) => {
     console.log(`Case: ${userCase}`)
     d3.select("body").append("p").text(userCase)
 })
+
+fetch('/test')
+    .then(function (response) {
+        return response.json();
+    }).then(function (text) {
+        console.log('GET response:');
+        console.log(text.greeting);
+    })
+
 // d3.select("#case-submit-button").on("click", (event) => {
 //     var userCase = d3.event.target.value;
 //     console.log("case-submit received");

@@ -12,6 +12,7 @@ def index():
 # Try this to transfer data to and from python and JS
 @app.route('/test', methods=['GET', 'POST'])
 def testfn():
+    print("Running test in app.py")
 
     # GET request
     if request.method == 'GET':  

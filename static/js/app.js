@@ -19,10 +19,25 @@ function getInfo() {
         d3.select("body").append("p").text(userCase)
     })
 
-    fetch('/test')
+    fetch(`${window.origin}/test`, {
+        method: "POST",
+        credentials: "include",
+        body: JSON.stringify(userLines),
+        cache: "no-cache",
+        headers: new Headers({
+            "content-type": "application/json"
+        })
+    })
         .then(function (response) {
             return response.json();
-        }).then(function (text) {
+        })
+        // .then(function (response) {
+        //     if (response.status !== 200) {
+        //         console.log(`Houston, we have a problem.Status code: ${response.status}`);
+        //         return;
+        //     }
+        // })
+        .then(function (text) {
             console.log('GET response:');
             console.log(text.greeting);
         })

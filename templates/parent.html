@@ -20,12 +20,12 @@
         <!-- Use JS, D3 -->
         <form>  
             <label>Enter number of lines (1-20):</label>  
-            <input type="number" id="lines-submit-button" name="lines" min="1" max="20">  <!-- need "onclick" here? -->
+            <input type="number" id="lines-submit-button" name="lines" min="1" max="20" onclick="getLines()">  <!-- need "onclick" here? -->
             <br>
             <br>
             <p>Please select case type:</p>
             <label>Uppercase(U), Lowercase(L) or Mixed(M):</label>  
-            <input type="text" id="case-submit-button" name="case" onclick="getInfo()">  <!-- need "onclick" here? -->
+            <input type="text" id="case-submit-button" name="case" onclick="getCase()">  <!-- need "onclick" here? -->
             <br>
             <br>
             <!-- <input type="radio" id="uppercase" name="case" value="u"> 
@@ -47,9 +47,10 @@
 
         {% block content %}{% endblock%}
 
-    <script src="./static/js/app.js">
+    <!-- <script src="./static/js/app.js">
         console.log("Hello World")
-    </script>
+    </script> -->
+    <script src="{{ url_for('static', filename='js/app.js') }}">console.log("script check")</script>
 
     </body>
 

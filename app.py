@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     # output = generate_letters()
-    return render_template("parent.html") # , output=output)
+    return render_template("index.html") # , output=output)
 
 # Try this to transfer data to and from python and JS
 @app.route('/test', methods=['GET', 'POST'])

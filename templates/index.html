@@ -18,15 +18,17 @@
     </head>
 
     <body>
-        <form action="/test" method="POST" style="width: 500px; margin: auto">
-        <!-- <form>   -->
+        <!-- <form action="/test" method="POST" style="width: 500px; margin: auto"> -->
+        <form>  
             <label>Enter number of lines (1-20):</label>  
-            <input type="number" id="lines-submit-button" name="lines" min="1" max="20" onclick="getLines()">  <!-- need "onclick" here? -->
+            <input type="number" id="lines-submit-button" name="lines" min="1" max="20">  <!-- onclick="getLines()" -->
+            <!-- <input type="submit" value="Submit"> -->
             <br>
             <br>
             <p>Please select case type:</p>
             <label>Uppercase(U), Lowercase(L) or Mixed(M):</label>  
-            <input type="text" id="case-submit-button" name="case" onclick="getCase()">  <!-- need "onclick" here? -->
+            <input type="text" id="case-submit-button" name="case">  <!-- onclick="getCase()" -->
+            <br>
             <input type="submit" value="Submit">
             <br>
             <br>

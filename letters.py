@@ -1,31 +1,33 @@
 import string, random
 
-def get_lines():
-    while True:
-        print("Please enter the number of lines and press [Enter]:")
-        try:
-            lines = int(input("--> ")) # How to get input from HTML?
-        except ValueError:
-            print("Not a valid number.")
-            continue
-        if lines < 0:
-            print("Your response must be a positive number.")
-            continue
-        break
+# def get_lines():
+#     while True:
+#         print("Please enter the number of lines and press [Enter]:")
+#         try:
+#             lines = int(input("--> ")) # How to get input from HTML?
+#         except ValueError:
+#             print("Not a valid number.")
+#             continue
+#         if lines < 0:
+#             print("Your response must be a positive number.")
+#             continue
+#         break
 
-    return lines
+#     return lines
 
-def get_case():
-    while True:
-        print("Would you like Uppercase, Lowercase or Mixed [U, L, M]?")
-        case = input("--> ")
-        case = case.lower()
-        if case not in ('u', 'l', 'm'):
-            print("Please enter either 'U', 'L', or 'M'")
-            continue
-        break
+# def get_case():
+#     while True:
+#         print("Would you like Uppercase, Lowercase or Mixed [U, L, M]?")
+#         case = input("--> ")
+#         case = case.lower()
+#         if case not in ('u', 'l', 'm'):
+#             print("Please enter either 'U', 'L', or 'M'")
+#             continue
+#         break
 
-    return case
+#     return case
+
+#######################################################################################
 
 def generate_letters(lines, case):
 

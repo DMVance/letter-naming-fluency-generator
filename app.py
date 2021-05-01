@@ -28,8 +28,11 @@ def testfn():
     print(user_data)
 
     lines, case = user_data
+    print(lines)
+    print(case)
 
     output = generate_letters(lines, case)
+    print(output)
 
     response = json.dumps(output)
     return response

@@ -1,41 +1,11 @@
 import string, random
 from flask import jsonify
 
-# def get_lines():
-#     while True:
-#         print("Please enter the number of lines and press [Enter]:")
-#         try:
-#             lines = int(input("--> ")) # How to get input from HTML?
-#         except ValueError:
-#             print("Not a valid number.")
-#             continue
-#         if lines < 0:
-#             print("Your response must be a positive number.")
-#             continue
-#         break
-
-#     return lines
-
-# def get_case():
-#     while True:
-#         print("Would you like Uppercase, Lowercase or Mixed [U, L, M]?")
-#         case = input("--> ")
-#         case = case.lower()
-#         if case not in ('u', 'l', 'm'):
-#             print("Please enter either 'U', 'L', or 'M'")
-#             continue
-#         break
-
-#     return case
-
-#######################################################################################
 
 def generate_letters(lines, case):
 
-    # lines = get_lines()  # Get from HTML input or app.js rather than function
-    # case = get_case()    # Get from HTML input or app.js rather than function
-    case = case.lower()
     lines = int(lines)
+    case = case.lower()
 
     print("From letters.py, lines = ", lines)
     print("From letters.py, case = ", case)
@@ -52,22 +22,7 @@ def generate_letters(lines, case):
     for i in range(lines):
         random_letters = random.sample(alphabet, p)
         output_list.append(random_letters)
-        # print(output_list)
-        # print(' '.join(random_letters))
     
     print(output_list)
 
     return jsonify(random_letters) # Return a JSON that can be pulled into JS.
-
-# def main():
-
-#     generate_letters()
-
-#     return
-
-# Here in python generate the printable PDF of the generated letters.
-# Research how to format the PDF for aesthetically pleasing results.
-
-#######################################################################################
-
-# main()

@@ -1,4 +1,4 @@
-import json
+import json, requests
 from flask import Flask, jsonify, render_template, request, make_response
 
 from letters import generate_letters
@@ -7,25 +7,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    # letters_output = generate_letters()
-    return render_template("index.html") #, output=letters_output)
+    return render_template("index.html")
 
-# Try this to transfer data to and from python and JS
-@app.route('/test', methods=['GET', 'POST'])
+# Transfer data between python and JS
+@app.route("/test", methods=["POST", "GET"])
 def testfn():
     print("Running test in app.py")
 
-    # # GET request
-    # if request.method == 'GET':  
-    #     message = {'greeting':'Hello from app.py Flask!'}
-    #     return jsonify(message)  # serialize and use JSON headers
-
-    # # POST request
-    # if request.method == 'POST':
-    #     print(request.get_json())  # parse as JSON
-    #     return 'Sucesss at app.py', 200
-
     user_data = request.get_json()
+    #user_data = request.form  #.get_json() # was working, now getting None type. The data is not making it from JS to "/test".
     print(user_data)
     print(type(user_data))
 
@@ -36,18 +26,8 @@ def testfn():
     output = generate_letters(lines, case)
     print("Output = ", output)
 
-    response = json.dumps(output)
+    # response = json.dumps(output)  # This was part of the problem!! response is not json serializable!
     return output
 
-# @app.route('/test', methods=['GET', 'POST'])
-# def testfn():
-#     print("Running test in app.py")
-#     user_lines = request.get_json()
-#     print(user_lines)
-
-#     response = json.dumps(user_lines)
-#     return response
-
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='localhost', port=5000, debug=True)

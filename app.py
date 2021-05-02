@@ -1,3 +1,4 @@
+import json
 from flask import Flask, jsonify, render_template, request, make_response
 
 from letters import generate_letters
@@ -14,22 +15,23 @@ def index():
 def testfn():
     print("Running test in app.py")
 
-    # GET request
-    if request.method == 'GET':  
-        message = {'greeting':'Hello from app.py Flask!'}
-        return jsonify(message)  # serialize and use JSON headers
+    # # GET request
+    # if request.method == 'GET':  
+    #     message = {'greeting':'Hello from app.py Flask!'}
+    #     return jsonify(message)  # serialize and use JSON headers
 
-    # POST request
-    if request.method == 'POST':
-        print(request.get_json())  # parse as JSON
-        return 'Sucesss at app.py', 200
+    # # POST request
+    # if request.method == 'POST':
+    #     print(request.get_json())  # parse as JSON
+    #     return 'Sucesss at app.py', 200
 
     user_data = request.get_json()
     print(user_data)
+    print(type(user_data))
 
     lines, case = user_data
-    print("Lines = ", lines)
-    print("Case = ", case)
+    print(lines)
+    print(case)
 
     output = generate_letters(lines, case)
     print("Output = ", output)

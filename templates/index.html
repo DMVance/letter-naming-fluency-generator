@@ -8,7 +8,7 @@
 			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
 			  crossorigin="anonymous"></script>
         <script src="https://d3js.org/d3.v6.min.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
         <script src ="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -19,9 +19,9 @@
 
     <body>
         <!-- <form action="/test" method="POST" style="width: 500px; margin: auto"> -->
-        <form>  
+        <form onsubmit="return false;" action="/test" method="POST">  
             <label>Enter number of lines (1-20):</label>  
-            <input type="number" id="lines-submit-button" name="lines" min="1" max="20">  <!-- onclick="getLines()" -->
+            <input type="text" id="lines-submit-button" name="lines" min="1" max="20">  <!-- onclick="getLines()" -->
             <!-- <input type="submit" value="Submit"> -->
             <br>
             <br>
@@ -55,10 +55,8 @@
 
         {% block content %}{% endblock%}
 
-    <script src="./static/js/app.js">
-        console.log("Hello World")
-    </script>
-    <!-- <script src="{{ url_for('static', filename='js/app.js') }}">console.log("script check")</script> -->
+    <script src="./static/js/app.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
     
     </body>
 

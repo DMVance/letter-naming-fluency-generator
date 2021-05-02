@@ -28,14 +28,14 @@ def testfn():
     print(user_data)
 
     lines, case = user_data
-    print(lines)
-    print(case)
+    print("Lines = ", lines)
+    print("Case = ", case)
 
     output = generate_letters(lines, case)
-    print(output)
+    print("Output = ", output)
 
     response = json.dumps(output)
-    return response
+    return output
 
 # @app.route('/test', methods=['GET', 'POST'])
 # def testfn():

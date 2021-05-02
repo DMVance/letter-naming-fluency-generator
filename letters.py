@@ -1,4 +1,5 @@
 import string, random
+from flask import jsonify
 
 # def get_lines():
 #     while True:
@@ -45,9 +46,11 @@ def generate_letters(lines, case):
     output_list = []
     for i in range(lines):
         random_letters = random.sample(alphabet, p)
+        output_list.append(random_letters)
+        print(output_list)
         print(' '.join(random_letters))
 
-    return random_letters # Return a JSON that can be pulled into JS.
+    return jsonify(random_letters) # Return a JSON that can be pulled into JS.
 
 # def main():
 

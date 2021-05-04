@@ -3,18 +3,18 @@ console.log("app.js is running!")
 function getData() {
 
     let userLines = d3.select("#lines-submit-button").property("value");
-    console.log(`Number of lines: ${userLines}`)
+    console.log(`app.js, Number of lines: ${userLines}`)
 
     let userCase = d3.select("#case-submit-button").property("value")
-    console.log(`Case: ${userCase}`)
+    console.log(`app.js, Case: ${userCase}`)
     d3.select("body").append("p").text(userCase)
 
     var data = [userLines, userCase]
-    console.log(`The data array is: ${data}`)
+    console.log(`app.js, The data array is: ${data}`)
 
     jsonArrData = JSON.stringify(data)
-    console.log(jsonArrData)
-    console.log(typeof jsonArrData === 'string')
+    console.log('app.js, ', jsonArrData)
+    console.log('app.js, ', typeof jsonArrData === 'string')
         
     // let table = d3.select("#letters-table").append("p").text(userLines)
     // table.selectAll("tr").remove() // remove all existing rows to reset, preventing posting data multiple times
@@ -34,10 +34,10 @@ function getData() {
     })
     // .then(response => response.json()) # This was part of the problem!! response is not json serializable!
     .then(data => {
-        console.log("Success, the data: ", data);
+        console.log("app.js, Success, the data: ", data);
     })
     .catch((error) => {
-        console.error("Aggravating Error: ", error); // data is not making it to "/test"
+        console.error("app.js, Aggravating Error: ", error); // data is not making it to "/test"
     });
 }
 

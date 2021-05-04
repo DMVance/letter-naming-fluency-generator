@@ -23,12 +23,14 @@ def testfn():
     print("app.py, Unpacked lines: ", lines)
     print("app.py, Unpacked case: ", case)
 
-    output = generate_letters(lines, case)
-    print("app.py: ", type(output))
-    print("app.py, Output = ", output)
+    output_raw = generate_letters(lines, case)
+    print("app.py: ", type(output_raw))
+    print("app.py, Output = ", output_raw)
+
+    output = jsonify(output_raw)
 
     # response = json.dumps(output)  # This was part of the problem!! response is not json serializable! Must have messed with this and broken the process that was working before.
-    return jsonify(output)
+    return output
 
 if __name__ == "__main__":
     app.run(debug=True)

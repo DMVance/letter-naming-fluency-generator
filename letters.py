@@ -7,8 +7,8 @@ def generate_letters(lines, case):
     lines = int(lines)
     case = case.lower()
 
-    print("From letters.py, lines = ", lines)
-    print("From letters.py, case = ", case)
+    print("letters.py, lines = ", lines)
+    print("letters.py, case = ", case)
 
     if case == "l":
         alphabet = list(string.ascii_lowercase)     # Can this section be collapsed?
@@ -23,6 +23,8 @@ def generate_letters(lines, case):
         random_letters = random.sample(alphabet, p)
         output_list.append(random_letters)
     
-    print(output_list)
+    print("letters.py: ", type(output_list))
+    print("letters.py: ", output_list)
 
-    return jsonify(random_letters) # Return a JSON that can be pulled into JS.
+    # return jsonify(random_letters) # Return a JSON that can be pulled into JS.
+    return output_list

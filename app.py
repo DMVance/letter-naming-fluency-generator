@@ -12,22 +12,23 @@ def index():
 # Transfer data between python and JS
 @app.route("/test", methods=["POST", "GET"])
 def testfn():
-    print("Running test in app.py")
+    print("app.py: Running test in app.py")
 
     user_data = request.get_json()
     #user_data = request.form  #.get_json() # was working, now getting None type. The data is not making it from JS to "/test".
-    print(user_data)
-    print(type(user_data))
+    print("app.py: ", user_data)
+    print("app.py: ", type(user_data))
 
     lines, case = user_data
-    print(lines)
-    print(case)
+    print("app.py, Unpacked lines: ", lines)
+    print("app.py, Unpacked case: ", case)
 
     output = generate_letters(lines, case)
-    print("Output = ", output)
+    print("app.py: ", type(output))
+    print("app.py, Output = ", output)
 
-    # response = json.dumps(output)  # This was part of the problem!! response is not json serializable!
-    return output
+    # response = json.dumps(output)  # This was part of the problem!! response is not json serializable! Must have messed with this and broken the process that was working before.
+    return jsonify(output)
 
 if __name__ == "__main__":
-    app.run(host='localhost', port=5000, debug=True)
+    app.run(debug=True)

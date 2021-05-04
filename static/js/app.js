@@ -7,7 +7,7 @@ function getData() {
 
     let userCase = d3.select("#case-submit-button").property("value")
     console.log(`app.js, Case: ${userCase}`)
-    d3.select("body").append("p").text(userCase)
+    // d3.select("body").append("p").text(userCase)
 
     var data = [userLines, userCase]
     console.log(`app.js, The data array is: ${data}`)
@@ -39,6 +39,14 @@ function getData() {
     .catch((error) => {
         console.error("app.js, Aggravating Error: ", error); // data is not making it to "/test"
     });
+
+    fetch(`${window.origin}/test`)
+    .then(response => response.json())
+    .then(data => console.log(data));
+  
+
+    d3.select(".output").append("p").text(data)
+
 }
 
 // Once logic is working and data is flowing properly between scripts and 

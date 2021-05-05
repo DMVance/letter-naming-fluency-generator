@@ -37,6 +37,7 @@ function getData() {
         console.log("app.js, Success, the data: ", data);
         data.json().then(function (responseJson) {
             console.log(responseJson)
+            d3.select(".output").append("p").text(responseJson)
             })
     })
     
@@ -50,6 +51,7 @@ function getData() {
   
 
     d3.select(".output").append("p").text(data)
+    // d3.select(".output").append("p").text(responseJson)
 
 }
 

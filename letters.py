@@ -24,7 +24,11 @@ def generate_letters(lines, case):
         output_list.append(random_letters)
     
     print("letters.py: ", type(output_list))
-    print("letters.py: ", output_list)
+    print("letters.py: ", *output_list, sep="\n")
+
+    ##############################################
+    # Set up the data for a Plotly table or other plot here. Send this back as JSON, rather than the raw data.
+    ##############################################
 
     # return jsonify(random_letters) # Return a JSON that can be pulled into JS.
     return output_list

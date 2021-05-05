@@ -15,7 +15,7 @@ def testfn():
     print("app.py: Running test in app.py")
 
     user_data = request.get_json()
-    #user_data = request.form  #.get_json() # was working, now getting None type. The data is not making it from JS to "/test".
+    #user_data = request.form  #.get_json() # Was working, then got None type. The data was not making it from JS to "/test".
     print("app.py: ", user_data)
     print("app.py: ", type(user_data))
 
@@ -24,12 +24,13 @@ def testfn():
     print("app.py, Unpacked case: ", case)
 
     output_raw = generate_letters(lines, case)
-    print("app.py: ", type(output_raw))
-    print("app.py, Output = ", output_raw)
+    print("app.py Output_raw type: ", type(output_raw))
+    print("app.py, Output_raw = ", output_raw)
 
     output = jsonify(output_raw)
-
-    # response = json.dumps(output)  # This was part of the problem!! response is not json serializable! Must have messed with this and broken the process that was working before.
+    print("app.py Output type: ", type(output))
+    print("app.py, Output = ", output)
+    # response = json.dumps(output)  # This was part of the problem!! Response is not json-serializable! Must have messed with this and broken the process that was working before.
     return output
 
 if __name__ == "__main__":

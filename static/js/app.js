@@ -35,14 +35,18 @@ function getData() {
     // .then(response => response.json()) # This was part of the problem!! response is not json serializable!
     .then(data => {
         console.log("app.js, Success, the data: ", data);
+        data.json().then(function (responseJson) {
+            console.log(responseJson)
+            })
     })
+    
     .catch((error) => {
         console.error("app.js, Aggravating Error: ", error); // data is not making it to "/test"
     });
 
-    fetch(`${window.origin}/test`)
-    .then(response => response.json())
-    .then(data => console.log(data));
+    // fetch(`${window.origin}/test`)
+    // .then(response => response.json())
+    // .then(data => console.log(data));
   
 
     d3.select(".output").append("p").text(data)

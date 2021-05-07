@@ -38,6 +38,7 @@ function getData() {
         data.json().then(function (responseJson) {
             console.log(responseJson)
             d3.select(".output").append("p").text(responseJson)
+            Plotly.newPlot("output", responseJson)
             })
     })
     

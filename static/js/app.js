@@ -37,22 +37,19 @@ function getData() {
         console.log("app.js, Success, the data: ", data);
         data.json().then(function (responseJson) {
             console.log(responseJson)
-            d3.select(".output").append("p").text(responseJson)
-            Plotly.newPlot("output", responseJson)
+            // d3.select(".output").append("p").text(responseJson)
+            Plotly.newPlot("output", responseJson)  // only plotting the object, not parsed data
             })
     })
-    
     .catch((error) => {
-        console.error("app.js, Aggravating Error: ", error); // data is not making it to "/test"
+        console.error("app.js, Aggravating Error: ", error); // data was not making it to "/test"
     });
 
     // fetch(`${window.origin}/test`)
     // .then(response => response.json())
     // .then(data => console.log(data));
-  
 
-    d3.select(".output").append("p").text(data)
-    // d3.select(".output").append("p").text(responseJson)
+    // d3.select(".output").append("p").text(data)
 
 }
 

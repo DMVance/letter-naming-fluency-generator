@@ -52,7 +52,8 @@ def generate_letters(lines, case):
         }
     }]
 
-    # Plotly.newPlot('myDiv', data);
+    # print("letters.py: output_data = ", output_data)
+
     ##############################################
 
     # return jsonify(random_letters) # Return a JSON that can be pulled into JS. --> Update: used jsonify() in app.py

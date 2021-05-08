@@ -31,6 +31,7 @@ def testfn():
     print("app.py Output type: ", type(output))
     print("app.py, Output = ", output)
     # response = json.dumps(output)  # This was part of the problem!! Response is not json-serializable! Must have messed with this and broken the process that was working before.
+    
     return output
 
 if __name__ == "__main__":

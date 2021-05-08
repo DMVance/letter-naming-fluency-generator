@@ -38,14 +38,14 @@ def generate_letters(lines, case):
     output_data = [{
         "type": 'table',
         "header": {
-            "values": ["<b>Lines</b>"],   #[ , ["<b>Q1</b>"], ["<b>Q2</b>"], ["<b>Q3</b>"], ["<b>Q4</b>"]],
+            "values": [["<b>Lines</b>"]], #, ["<b>L1</b>"], ["<b>L2</b>"], ["<b>L3</b>"], ["<b>L4</b>"], ["<b>L5</b>"], ["<b>L6</b>"], ["<b>L7</b>"], ["<b>L8</b>"], ["<b>L9</b>"], ["<b>L10</b>"]],
             "align": "center",
             "line": {"width": 1, "color": "black"},
             "fill": {"color": "grey"},
             "font": {"family": "Arial", "size": 12, "color": "white"}
         },
         "cells": {
-            "values": output_list,
+            "values": output_list,  # Need to transpose table rows/columns
             "align": "center",
             "line": {"color": "black", "width": 1},
             "font": {"family": "Arial", "size": 11, "color": ["black"]}
@@ -57,4 +57,4 @@ def generate_letters(lines, case):
     ##############################################
 
     # return jsonify(random_letters) # Return a JSON that can be pulled into JS. --> Update: used jsonify() in app.py
-    return output_data     #output_list
+    return output_data     #output_list output_data

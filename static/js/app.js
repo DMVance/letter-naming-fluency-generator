@@ -13,8 +13,8 @@ function getData() {
     console.log(`app.js, The data array is: ${data}`)
 
     jsonArrData = JSON.stringify(data)
-    console.log('app.js, ', jsonArrData)
-    console.log('app.js, ', typeof jsonArrData === 'string')
+    // console.log('app.js, ', jsonArrData)
+    console.log('app.js, jsonArrData is a string: ', typeof jsonArrData === 'string')
         
     // let table = d3.select("#letters-table").append("p").text(userLines)
     // table.selectAll("tr").remove() // remove all existing rows to reset, preventing posting data multiple times
@@ -35,10 +35,14 @@ function getData() {
     // .then(response => response.json()) # This was part of the problem!! response is not json serializable!
     .then(data => {
         console.log("app.js, Success, the data: ", data);
-        data.json().then(function (responseJson) {
+        // d3.select(".output").append("p").text(data.json())
+        data.json().then(responseJson => {  // .json() 
             console.log(responseJson)
+            responseJson.forEach(e => {
+                d3.select(".output").append("p").text(e)
+            });
             // d3.select(".output").append("p").text(responseJson)
-            Plotly.newPlot("output", responseJson)  // only plotting the object, not parsed data
+            // Plotly.newPlot("output", responseJson)  // only plotting the object, not parsed data
             })
     })
     .catch((error) => {

@@ -54,7 +54,9 @@ def generate_letters(lines, case):
 
     # print("letters.py: output_data = ", output_data)
 
+    # output_formatted = 
+
     ##############################################
 
     # return jsonify(random_letters) # Return a JSON that can be pulled into JS. --> Update: used jsonify() in app.py
-    return output_data     #output_list output_data
+    return output_list     #output_list output_data

@@ -34,13 +34,15 @@ function getData() {
     })
     // .then(response => response.json()) # This was part of the problem!! response is not json serializable!
     .then(data => {
-        console.log("app.js, Success, the data: ", data);
+        console.log("app.js, Success! The data: ", data);
         // d3.select(".output").append("p").text(data.json())
         data.json().then(responseJson => {  // .json() 
             console.log(responseJson)
+            // console.log(typeof responseJson)
+            d3.select(".output").selectAll("p").remove()
             responseJson.forEach(e => {
-                d3.select(".output").append("p").text(e)
-            });
+                d3.select(".output").append("p").text(Object.values(e).join(" ")) // Uncaught (in promise) TypeError: e.split is not a function
+            });                                            // Also need to clear screen when re-running so output doesn't just append to last run
             // d3.select(".output").append("p").text(responseJson)
             // Plotly.newPlot("output", responseJson)  // only plotting the object, not parsed data
             })

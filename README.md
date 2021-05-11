@@ -20,6 +20,7 @@ This app generates lists of letters that educators can use in the classroom for 
 * JavaScript
 * D3
 * Flask, Jinja
+* JSON
 * HTML/CSS
 * Bootstrap
 

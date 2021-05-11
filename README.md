@@ -33,4 +33,6 @@ This app generates lists of letters that educators can use in the classroom for 
 #### Once more with 7 lines in Uppercase:
 <img src=./Readme-Images/LNFG_App_3.jpg width=500></img>
 
+#### The user does not have to manually refresh the page each time before running new selections.
 
+### As I continue to improve on the functionality of the app, I am also working in the background on the UI/UX component of the final product.  I expect to begin implementing more design into the page as soon as I'm satisfied that the app is fully functional and provides value to educators.

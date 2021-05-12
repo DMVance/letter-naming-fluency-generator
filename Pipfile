@@ -9,6 +9,10 @@ node = "*"
 npm = "*"
 requests = "*"
 plotly = "*"
+fpdf = "*"
+numpy = "*"
+matplotlib = "*"
+pandas = "*"
 
 [dev-packages]
 

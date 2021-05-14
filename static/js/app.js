@@ -22,7 +22,6 @@ function getData() {
     // table.selectAll("tr").remove()
 
     fetch(`${window.origin}/test`, {
-    // fetch("http://127.0.0.1:5000", {
         method: "POST",
         // mode: "cors",
         credentials: "include",
@@ -41,21 +40,14 @@ function getData() {
             // console.log(typeof responseJson)
             d3.select(".output").selectAll("p").remove()
             responseJson.forEach(e => {
-                d3.select(".output").append("p").text(Object.values(e).join(" ")) // Uncaught (in promise) TypeError: e.split is not a function
-            });                                            // Also need to clear screen when re-running so output doesn't just append to last run
-            // d3.select(".output").append("p").text(responseJson)
+                d3.select(".output").append("p").text(Object.values(e).join(" "))
+            });
             // Plotly.newPlot("output", responseJson)  // only plotting the object, not parsed data
             })
     })
     .catch((error) => {
-        console.error("app.js, Aggravating Error: ", error); // data was not making it to "/test"
+        console.error("app.js, Aggravating Error: ", error); // data is not showing on "/test"
     });
-
-    // fetch(`${window.origin}/test`)
-    // .then(response => response.json())
-    // .then(data => console.log(data));
-
-    // d3.select(".output").append("p").text(data)
 
 }
 

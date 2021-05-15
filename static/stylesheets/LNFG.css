@@ -48,7 +48,17 @@
     color: maroon;
 }
 
+/* center form */
 .form {
+    text-align: center;
+    /* padding-top: 5px; */
+    /* font-family: "Chomsky"; */
+    /* font-size: 40px; */
+    /* color: rgb(5, 5, 5); */
+}
+
+/* center output */
+.output {
     text-align: center;
     /* padding-top: 5px; */
     /* font-family: "Chomsky"; */

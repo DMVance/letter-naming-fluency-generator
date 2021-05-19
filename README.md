@@ -26,13 +26,13 @@ This app generates lists of letters that educators can use in the classroom for 
 
 ### This app is a work in progress.  With that qualification, here are some images of the current state of the webpage.
 #### The user enters the number of lines to generate and which case they would like (U = Upper Case, L = Lower Case, M = Mixed Case).  The user selects 10 lines with Mixed Case:
-<img src=./Readme-Images/LNFG_App_1.png width=500></img>
+<img src=./Readme-Images/LNFG_App_1.png width=750></img>
 
 #### The user may then run the program again with different selections, and the output will update accordingly. Here the user has selected 5 lines in Lowercase:
-<img src=./Readme-Images/LNFG_App_2.png width=500></img>
+<img src=./Readme-Images/LNFG_App_2.png width=750></img>
 
 #### Once more with 7 lines in Uppercase:
-<img src=./Readme-Images/LNFG_App_3.png width=500></img>
+<img src=./Readme-Images/LNFG_App_3.png width=750></img>
 
 #### The user does not have to manually refresh the page each time before running new selections.
 

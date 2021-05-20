@@ -24,11 +24,16 @@
 /* ---- nav bar for all pages ---- */
 /* format header */
 .header {
-    padding: .5em;
-    background-image: url("../img/Featured Images for Blog Posts-2.png");    /* ../img/letters.jpg */
+    background-image: url("../img/Feature_Image.png");    /* Bootstrap?     ../img/letters.jpg */
     background-repeat: no-repeat;
-    background-size: 75%;
     background-position: center;
+    width: 100%;
+    height:500px;
+    object-fit: cover;
+    /* object-position: 0 -40%; */
+    bottom: -100px;
+    overflow: hidden;
+    margin:auto;
 }
 
 /* center header and add padding */

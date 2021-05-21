@@ -5,7 +5,7 @@
 
 In a Letter Name Fluency (LNF) task, a student is given a random list of upper- and lower-case letters and has 1 minute to identify the names of as many letters as possible. Schools often use these scores to determine which students are at risk for reading difficulties.
 
-#### Why is letter naming fluency important? 
+### Why is letter naming fluency important? 
 
 Letter naming fluency is included in many assessments because it’s a great indicator of risk and a strong predictor of reading success. Letter-naming speed is the single most significant predictor for word reading ability for first-grade students. (Neuhaus & Swank, 2002).  
 

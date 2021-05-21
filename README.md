@@ -25,7 +25,8 @@ This app generates lists of letters that educators can use in the classroom for 
 * Bootstrap
 
 ### This app is a work in progress.  With that qualification, here are some images of the current state of the webpage.
-#### The user enters the number of lines to generate and which case they would like (U = Upper Case, L = Lower Case, M = Mixed Case).  The user selects 10 lines with Mixed Case:
+#### The user enters the number of lines to generate and selects the case they would like from a dropdown menu.
+#### The user selects 10 lines with Mixed Case:
 <img src=./Readme-Images/LNFG_App_1.png width=750></img>
 
 #### The user may then run the program again with different selections, and the output will update accordingly. Here the user has selected 5 lines in Uppercase:

@@ -13,6 +13,7 @@ fpdf = "*"
 numpy = "*"
 matplotlib = "*"
 pandas = "*"
+gunicorn = "*"
 
 [dev-packages]
 

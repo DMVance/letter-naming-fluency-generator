@@ -1,4 +1,6 @@
 # letter-naming-fluency-generator
+## https://letter-naming-fluency.herokuapp.com/
+## [Link to App Deployed on Heroku: https://letter-naming-fluency.herokuapp.com/](https://letter-naming-fluency.herokuapp.com/)
 <img src=./Readme-Images/letters.jpg width=1000></img>
 
 ### What is letter naming fluency?

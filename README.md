@@ -36,4 +36,7 @@ This app generates lists of letters that educators can use in the classroom for 
 
 #### The user does not have to manually refresh the page each time before running new selections.
 
-### As I continue to improve on the functionality of the app, I am also working in the background on the UI/UX component of the final product.  I expect to begin implementing more design into the page as soon as I'm satisfied that the app is fully functional and provides value to educators.  I will also soon deploy the app via Heroku to make the app fully functional and available while I continue to develop the UI/UX.
+### Next Steps:
+* Add PDF export functionality.
+* Format output on the page to resemble the exportable PDF.
+* Deploy the app via Heroku to make it fully functional and available.

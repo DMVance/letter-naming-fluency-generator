@@ -1,22 +1,16 @@
 import string, random
 from flask import jsonify
-import numpy as np
-import pandas as pd
-from fpdf import FPDF
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-from matplotlib.ticker import ScalarFormatter
+from reportlab.pdfgen.canvas import Canvas
+from reportlab.lib.units import inch, cm
+from reportlab.lib.pagesizes import LETTER
 
 def generate_letters(lines, case):
 
     lines = int(lines)
     case = case.lower()
 
-    print("letters.py, lines = ", lines)
-    print("letters.py, case = ", case)
-
     if case == "l":
-        alphabet = list(string.ascii_lowercase)     # Can this section be collapsed?
+        alphabet = list(string.ascii_lowercase)
     elif case == "u":
         alphabet = list(string.ascii_uppercase)
     elif case == "m":
@@ -27,41 +21,16 @@ def generate_letters(lines, case):
     for i in range(lines):
         random_letters = random.sample(alphabet, p)
         output_list.append(random_letters)
-    
-    print("letters.py: ", type(output_list))
-    print("letters.py: ", *output_list, sep="\n")
 
     ##############################################
-    # Set up the data for a Plotly table or other plot here. Send this back as JSON, rather than the raw data.
-    # var values = [
-    #   ['Salaries', 'Office', 'Merchandise', 'Legal', '<b>TOTAL</b>'],
-    #   [1200000, 20000, 80000, 2000, 12120000],
-    #   [1300000, 20000, 70000, 2000, 130902000],
-    #   [1300000, 20000, 120000, 2000, 131222000],
-    #   [1400000, 20000, 90000, 2000, 14102000]]
+    # Generate PDF
 
-    output_data = [{
-        "type": 'table',
-        "header": {
-            "values": [["<b>Lines</b>"]], #, ["<b>L1</b>"], ["<b>L2</b>"], ["<b>L3</b>"], ["<b>L4</b>"], ["<b>L5</b>"], ["<b>L6</b>"], ["<b>L7</b>"], ["<b>L8</b>"], ["<b>L9</b>"], ["<b>L10</b>"]],
-            "align": "center",
-            "line": {"width": 1, "color": "black"},
-            "fill": {"color": "grey"},
-            "font": {"family": "Arial", "size": 12, "color": "white"}
-        },
-        "cells": {
-            "values": output_list,  # Need to transpose table rows/columns
-            "align": "center",
-            "line": {"color": "black", "width": 1},
-            "font": {"family": "Arial", "size": 11, "color": ["black"]}
-        }
-    }]
-
-    # print("letters.py: output_data = ", output_data)
-
-    # output_formatted = 
+    # pdf_string = '\n'.join([' '.join(map(str,l)) for l in output_list])
+    # canvas = Canvas("hello.pdf", pagesize=LETTER)
+    # canvas.setFont("Times-Roman", 18)
+    # [canvas.drawString(1 * inch, 10 * inch, output_list[l][0]) for l in output_list]
+    # canvas.save()
 
     ##############################################
 
-    # return jsonify(random_letters) # Return a JSON that can be pulled into JS. --> Update: used jsonify() in app.py
-    return output_list     #output_list output_data
+    return output_list

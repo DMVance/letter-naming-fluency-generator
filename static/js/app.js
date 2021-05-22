@@ -34,13 +34,11 @@ function getData() {
     // .then(response => response.json()) # This was part of the problem!! response is not json serializable!
     .then(data => {
         console.log("app.js, Success! The data: ", data);
-        // d3.select(".output").append("p").text(data.json())
-        data.json().then(responseJson => {  // .json() 
+        data.json().then(responseJson => {
             console.log(responseJson)
-            // console.log(typeof responseJson)
             d3.select(".output").selectAll("p").remove()
             responseJson.forEach(e => {
-                d3.select(".output").append("p").text(Object.values(e).join(" "))
+                d3.select(".output").append("p").text(Object.values(e).join(" ")).append("hr");
             });
             // Plotly.newPlot("output", responseJson)  // only plotting the object, not parsed data
             })

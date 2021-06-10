@@ -25,11 +25,11 @@ def generate_letters(lines, case):
     ##############################################
     # Generate PDF
 
-    # pdf_string = '\n'.join([' '.join(map(str,l)) for l in output_list])
-    # canvas = Canvas("hello.pdf", pagesize=LETTER)
-    # canvas.setFont("Times-Roman", 18)
-    # [canvas.drawString(1 * inch, 10 * inch, output_list[l][0]) for l in output_list]
-    # canvas.save()
+    pdf_string = '\n'.join([' '.join(map(str,l)) for l in output_list])
+    canvas = Canvas("hello.pdf", pagesize=LETTER)
+    canvas.setFont("Times-Roman", 18)
+    [canvas.drawString(1 * inch, 10 * inch, output_list[l][0]) for l in output_list]
+    canvas.save()
 
     ##############################################
 

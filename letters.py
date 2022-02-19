@@ -33,7 +33,7 @@ def generate_letters(lines, case):
     pdf_string = '\n'.join([' '.join(map(str,l)) for l in output_list]) # Separate each letter with a space and each set on a separate line.
     canvas = Canvas("hello.pdf", pagesize=LETTER)
     canvas.setFont("Times-Roman", 18)
-    [canvas.drawString(1 * inch, 10 * inch, pdf_string] # output_list[l][0]) for l in output_list]
+    [canvas.drawString(1 * inch, 10 * inch, pdf_string)] # output_list[l][0]) for l in output_list]
     canvas.save()
 
     ##############################################
